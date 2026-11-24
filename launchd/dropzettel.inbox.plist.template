@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template. setup.sh fills in __CODE__, __HOME__ and __INBOX__ and installs the result
+     in ~/Library/LaunchAgents/. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>dropzettel.inbox</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__CODE__/run.sh</string>
+    <string>process</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>DROPZETTEL_HOME</key>
+    <string>__HOME__</string>
+    <key>DROPZETTEL_FROM_LAUNCHD</key>
+    <string>1</string>
+  </dict>
+  <!-- Run whenever something lands in the inbox, and every 30 minutes as a safety net. -->
+  <key>WatchPaths</key>
+  <array>
+    <string>__INBOX__</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>1800</integer>
+  <key>ThrottleInterval</key>
+  <integer>60</integer>
+  <key>StandardOutPath</key>
+  <string>__HOME__/state/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/state/launchd.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

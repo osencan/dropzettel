@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template. setup.sh fills in __CODE__, __HOME__ and __INBOX__ and installs the result
+     in ~/Library/LaunchAgents/. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>dropzettel.digest</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__CODE__/run.sh</string>
+    <string>digest</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>DROPZETTEL_HOME</key>
+    <string>__HOME__</string>
+    <key>DROPZETTEL_FROM_LAUNCHD</key>
+    <string>1</string>
+  </dict>
+  <!-- Weekly review: every Sunday at 18:00 local time (runs on wake if the Mac was asleep). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>0</integer>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>__HOME__/state/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/state/launchd.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

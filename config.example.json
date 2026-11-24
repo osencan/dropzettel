@@ -1,0 +1,9 @@
+{
+  "vault": "~/Documents/MyVault",
+  "inbox": "~/Dropbox/Dropzettel/inbox",
+  "model": "sonnet",
+  "note_language": "English",
+  "owner_context": "One or two sentences about you: what you do, what you build, what you are curious about. The librarian uses this to judge why a capture might matter to you.",
+  "ocr_languages": "eng",
+  "max_items_per_run": 25
+}

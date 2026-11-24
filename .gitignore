@@ -1,0 +1,14 @@
+# Personal data must never be committed: config and everything the processor writes
+config.json
+inbox/
+processed/
+failed/
+fulltext/
+state/
+*.shortcut
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
