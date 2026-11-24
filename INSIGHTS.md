@@ -49,4 +49,6 @@ Decisions and discoveries, newest last.
 - Both shortcut variants build and are accepted by `shortcuts sign`.
 - The Dropbox shortcut and the launchd job shape are in use in the private setup this was extracted from.
 
-Not tested: the iCloud shortcut on a phone, `setup.sh --jobs yes` from a clone, the interactive prompts, any non-macOS system.
+- Fresh clone of the public repository (commit `4a0c68c`) into a temporary folder, `./setup.sh --sync folder … --jobs yes --yes`: the environment was created, both jobs loaded, and a text file dropped into the inbox was filed by the inbox job 37 seconds later with exit code 0. `./setup.sh --uninstall-jobs` then removed both jobs and their plist files.
+
+Not tested: the iCloud shortcut on a phone, the Dropbox path through the public setup (shortcut build inside a real Dropbox folder), the interactive prompts, the digest job firing on schedule, any non-macOS system.

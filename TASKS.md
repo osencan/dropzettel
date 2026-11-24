@@ -9,6 +9,7 @@
 - [x] Shortcut builder with Dropbox and iCloud variants
 - [x] `make validate`: compile, shell syntax, plist lint, self-test, no-personal-paths check
 - [x] Fresh unattended install into a scratch folder, one link and one thought filed on the default model
+- [x] Fresh clone from GitHub, `setup.sh --jobs yes`: jobs loaded, a dropped capture was filed by the inbox job, `--uninstall-jobs` removed both
 - [x] README, sync options doc, MIT license, GitHub Sponsors funding file
 
 ## Before the first push (developer)
@@ -22,7 +23,6 @@
 ## Next
 
 - [ ] Run the iCloud shortcut variant on a phone; update `docs/sync-options.md` with the result
-- [ ] Load-test the rendered launchd jobs from a fresh clone (the templates lint, and the same job shape runs in the private setup, but `setup.sh --jobs yes` itself has not been run)
 - [ ] Second model backend (API key, or a local model) behind `llm_json()`
 - [ ] Index URLs inside pre-existing notes so old sources are detected as duplicates
 - [ ] Android capture (a share target that writes a text file into the synced folder)
