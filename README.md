@@ -162,6 +162,10 @@ Open an AI coding agent in the vault folder and ask: "What have I saved about on
 
 Dropzettel is an independent project. It is not affiliated with or endorsed by Dropbox, Apple, Obsidian or Anthropic. Their names are used only to describe what it works with.
 
+## Acknowledgements
+
+Dropzettel was built with [Claude Code](https://claude.com/claude-code), with support from the [Claude for Startups program](https://claude.com/programs/startups). Thank you to the team behind it.
+
 ## Support
 
 If Dropzettel keeps your notes out of your WhatsApp self-chat, you can support its development at [github.com/sponsors/osencan](https://github.com/sponsors/osencan).
