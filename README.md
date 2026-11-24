@@ -1,5 +1,7 @@
 # Dropzettel
 
+![Dropzettel workflow: capture on the phone, a synced inbox folder, the vault with its seven folders and capture log, then the graph view and asking questions](images/dropzettel-workflow.png)
+
 **A Zettelkasten for people who are too lazy to keep one.** Drop a link, a thought or a screenshot into a synced folder. It is filed into your Obsidian vault as a tagged, linked note, and a log tells you where it went and why.
 
 I built an Obsidian Zettelkasten once and abandoned it after three weeks. Every capture needed about six decisions (folder, template, tags, index, status, links), so my notes kept ending up in WhatsApp messages to myself and in bookmark folders I never opened. Dropzettel splits the work: you capture and you think, and the machine does the filing.
