@@ -28,3 +28,6 @@
 - [ ] Android capture (a share target that writes a text file into the synced folder)
 - [ ] Linux: systemd path unit as the counterpart of the launchd jobs
 - [ ] Import helpers: X bookmarks, browser reading lists
+- [x] Document `import-whatsapp` in the README (2026-11-25)
+- [ ] `import-whatsapp`: option to keep only one sender; use the message date as the capture date; skip already-imported thoughts; non-English "omitted" placeholders
+- [ ] `import-whatsapp`: run it on a real export end to end (so far: two invented samples, split step only)

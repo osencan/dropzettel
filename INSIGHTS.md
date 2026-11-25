@@ -52,3 +52,7 @@ Decisions and discoveries, newest last.
 - Fresh clone of the public repository (commit `4a0c68c`) into a temporary folder, `./setup.sh --sync folder … --jobs yes --yes`: the environment was created, both jobs loaded, and a text file dropped into the inbox was filed by the inbox job 37 seconds later with exit code 0. `./setup.sh --uninstall-jobs` then removed both jobs and their plist files.
 
 Not tested: the iCloud shortcut on a phone, the Dropbox path through the public setup (shortcut build inside a real Dropbox folder), the interactive prompts, the digest job firing on schedule, any non-macOS system.
+
+## 2026-11-25 — `import-whatsapp` documented as it behaves
+
+The README now has its own section for the importer. It was checked against two invented exports (iPhone bracket layout, Android dash layout), split step only, no model call. Observed and written down rather than fixed: all senders are imported and the name is dropped; media placeholders are skipped by the English word "omitted" only; the capture date is the import time, the WhatsApp date survives as text; a second import re-files plain-text thoughts because only links and files have a duplicate key. The fixes are listed in `TASKS.md`.

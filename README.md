@@ -151,8 +151,34 @@ Each capture is one model call on your Claude plan. In the author's use a short 
 - Classification needs the Claude CLI. Other model backends are not implemented; `llm_json()` in `dropzettel.py` is the single function to replace.
 - Pages behind a login or paywall are filed from the URL and your comment only, and marked for review.
 - Notes that existed before Dropzettel are not in the duplicate index, so a link you already had a note for is filed again and linked to the old note.
-- The WhatsApp chat importer (`import-whatsapp`) is experimental.
+- The WhatsApp chat importer is experimental; see [Importing a WhatsApp chat](#importing-a-whatsapp-chat-experimental).
 - The background jobs only run while you are logged in on the Mac.
+
+## Importing a WhatsApp chat (experimental)
+
+If your notes live in a WhatsApp chat with yourself, `import-whatsapp` turns that chat into captures. It is a subcommand of the processor (`cmd_import_whatsapp` in [`dropzettel.py`](dropzettel.py)) and makes no model call itself: it only splits the export into one text file per message and writes those into the inbox.
+
+1. In WhatsApp, open the chat → *Export Chat* → *Without Media*. Unzip the result if it is a zip; you need the `.txt` file inside (`_chat.txt` on iPhone).
+2. Run the importer on it:
+
+   ```bash
+   ./run.sh --home ~/Dropbox/Dropzettel import-whatsapp ~/Downloads/_chat.txt
+   ```
+
+3. The messages are filed like any other capture: by the background job, or by running `process`.
+
+Each message becomes `wa-<date and time>-<number>.txt` in the inbox, holding the message text and a line such as `(from WhatsApp, 24.11.2026 10:15:02)`. Multi-line messages stay together.
+
+What to know before you run it on a long chat:
+
+- **Every message is one model call.** A chat with 800 messages is 800 captures. At most `max_items_per_run` (default 25) are filed per run; the rest wait in the inbox for the next run.
+- **Everyone's messages are imported**, not only yours, and the sender's name is dropped. It is meant for a chat with yourself. For a group chat, delete the lines you do not want from the export first.
+- **Media is skipped.** Export without media; "image omitted" placeholders are ignored (the English wording only). Save photos and PDFs into the inbox yourself.
+- **The note's capture date is the import date.** The original WhatsApp date is kept as text in the note.
+- **Importing the same export twice** files links only once, but plain-text thoughts are filed again.
+- **Date formats:** checked against two invented samples, the iPhone layout (`[24.11.2026, 10:15:02] Name: text`) and the Android layout (`11/24/26, 9:06 PM - Name: text`). Other regional layouts may not be recognised; the importer prints how many messages it parsed, so compare that with what you expect.
+
+To try it safely, cut the export down to ten lines first and look at the files that appear in the inbox.
 
 ## Asking your vault
 
