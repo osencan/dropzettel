@@ -14,7 +14,7 @@ entry explaining how and why it was filed.
 Data (config.json, state, processed, failed, fulltext) lives in the "home" folder:
 --home, else $DROPZETTEL_HOME, else the folder this script is in.
 
-Design rules (see INSIGHTS.md):
+Design rules:
   * The script does all file operations. The LLM only returns JSON — it has no
     tools, so fetched web content can never make it touch your files.
   * Nothing is ever deleted. Originals are moved to the vault (binaries) or to

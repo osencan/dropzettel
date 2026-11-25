@@ -12,3 +12,10 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# Development working files: kept locally, not part of the published tool.
+# Anchored to the repository root so vault-template/ is not affected.
+/TASKS.md
+/INSIGHTS.md
+/INITIAL_PROMPT.md
+/CRITICS/
