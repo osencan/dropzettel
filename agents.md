@@ -2,7 +2,7 @@
 
 Read this first. It applies to Claude, Gemini and Codex alike.
 
-Dropzettel is a public, MIT-licensed tool: an inbox folder, a processor that files captures into an Obsidian Zettelkasten, a starter vault, a phone shortcut builder and launchd job templates. See `README.md` for what users see, `INSIGHTS.md` for why things are the way they are, `TASKS.md` for open work.
+Dropzettel is a public, MIT-licensed tool: an inbox folder, a processor that files captures into an Obsidian Zettelkasten, a starter vault, a phone shortcut builder and launchd job templates. See `README.md` for what users see, `INSIGHTS.md` for why things are the way they are, `TASKS.md` for open work. Those two are the developer's local working files and are not in the public repository; if you do not have them, skip them.
 
 ## Layout
 
