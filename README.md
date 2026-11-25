@@ -49,6 +49,8 @@ The starter vault is in [`vault-template/`](vault-template). Setup creates it, o
 
 Every filed note carries frontmatter (`type`, `kind`, `status`, `action`, `captured`, `tags`, `topics`, `summary`, `url`), so Dataview and Obsidian's property search work on it.
 
+New to Obsidian or to Zettelkasten? [docs/obsidian-guide.md](docs/obsidian-guide.md) covers what to do with the notes once they are filed: writing permanent notes, reading the graph, and brainstorming with the vault.
+
 ## Requirements
 
 - macOS for the full setup (background jobs, phone shortcut, HEIC and Word conversion). The processor itself is plain Python and runs anywhere.
